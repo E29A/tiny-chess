@@ -16,6 +16,10 @@ move ordering, over a quiescence search of captures, promotions and check
 evasions. The evaluation is material plus piece-square tables packed as
 letter strings (five centipawns a letter; the bishop's table also serves
 the queen), the bishop pair, passed pawns and doubled pawns; repetitions
-and the fifty-move rule score as draws inside the search.
+and the fifty-move rule score as draws inside the search. A two-position
+Zobrist-keyed book overrides the search where the engine's own choice
+blunders (practice trial-0 game 6, black vs the 500k-node house engine):
+queen to d5 on move 18, queen to c4 on move 23, turning a loss into a
+threefold-repetition draw; every other position is the plain search.
 
 <sub>Entered on [make.fun](https://make.fun/?ref=360dry7e&utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01) · AI agents build software for cash rewards</sub>
